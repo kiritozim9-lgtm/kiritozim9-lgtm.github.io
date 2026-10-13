@@ -65,15 +65,8 @@ h1{font-size:24px;margin:22px 20px 14px;font-weight:800}
 .btn.qr svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .tx{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid var(--brd)}
 .tx:last-child{border-bottom:0}
-.tx .i{flex:1;min-width:0}
-.tx .t{font-size:14px;font-weight:700}
-.tx .s{font-size:12px;color:var(--mut);margin-top:3px}
-.tx .v{font-weight:800;white-space:nowrap}
-.tx .v.in{color:var(--grn)}
-.tx .v.out{color:#ff6b78}
-.tx .vb{font-size:11.5px;color:#c98eff;font-weight:600;cursor:pointer;margin-top:6px;display:inline-block}
-.empty{padding:32px 20px;color:var(--mut);text-align:center;font-size:13.5px;line-height:1.6}
-nav{position:fixed;bottom:0;left:0;right:0;background:rgba(11,11,15,.96);backdrop-filter:blur(20px);border-top:1px solid var(--brd);display:grid;grid-template-columns:repeat(5,1fr);padding:10px 6px 14px;z-index:30}
+  .empty{padding:32px 20px;color:var(--mut);text-align:center;font-size:13.5px;line-height:1.6}
+nav{position:fixed;bottom:0;left:0;right:0;background:rgba(11,11,15,.96);border-top:1px solid var(--brd);display:grid;grid-template-columns:repeat(5,1fr);padding:10px 6px 14px;z-index:30}
 nav button{color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:5px;font-size:10.5px;font-weight:600;padding:4px 0;position:relative;cursor:pointer}
 nav button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 nav button.active{color:#fff}
@@ -85,44 +78,13 @@ nav button.active::before{content:"";position:absolute;top:-4px;left:50%;transfo
 .crd .nm{font-size:19px;letter-spacing:3px;font-weight:600;margin:22px 0}
 .crd .bt{display:flex;justify-content:space-between;font-size:11px;color:#e0c8ff;text-transform:uppercase}
 .crd .bt b{display:block;color:#fff;font-size:13px;margin-top:4px}
-/* ============ COMPROVANTE ============ */
 .rcpt{position:fixed;inset:0;background:#fff;color:#111;z-index:50;overflow-y:auto;display:none}
 .rcpt.on{display:block}
-.rcp{max-width:620px;margin:auto;padding:26px 24px 60px;font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif}
-.rcp .bk{background:#f0f0f2;border-radius:10px;padding:10px 16px;font-size:13px;font-weight:600;margin-bottom:28px;color:#333;display:inline-block;cursor:pointer;border:0}
-.rcp .lg{color:#820ad1;font-size:44px;font-weight:900;letter-spacing:-4px;margin-bottom:22px;line-height:1;font-family:Arial,sans-serif}
-.rcp h2{font-size:28px;font-weight:800;margin-bottom:8px;color:#111;letter-spacing:-.6px;line-height:1.2}
-.rcp .dt{font-size:15px;color:#a0a0a0;margin-bottom:36px;font-weight:500}
-.rcp .row{display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:16px;border-bottom:1px solid #f0f0f2}
-.rcp .row .l{color:#111;font-weight:600}
-.rcp .row .v{color:#7a7a7a;text-align:right;max-width:60%;word-break:break-word;font-weight:500}
-.rcp .sec-title{display:flex;align-items:center;gap:12px;font-size:16px;font-weight:700;color:#111;margin:32px 0 4px;padding-top:20px}
-.rcp .sec-title svg{width:26px;height:26px;stroke:#111;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.rcp .sec-title .icon{width:38px;height:38px;border-radius:8px;border:1.5px solid #111;display:grid;place-items:center}
-.rcp .box{background:#f5f5f7;border-radius:12px;padding:24px;margin-top:36px;font-size:13.5px;line-height:1.7;color:#555}
-.rcp .box b{color:#111;display:block;font-weight:700;font-size:14px}
-.rcp .box .cj{display:block;color:#111;font-weight:700}
-.rcp .box .idt{display:block;margin-top:18px;color:#111;font-weight:700}
-.rcp .box .at{display:block;color:#333;word-break:break-all;font-size:12.5px;margin-top:4px;font-family:ui-monospace,Menlo,monospace}
-.rcp .box .help{display:block;margin-top:18px;color:#666}
-.rcp .box .lk{color:#820ad1;font-weight:700;text-decoration:none;display:inline-block;margin-top:10px;font-size:14px}
-.rcp .box .ouvidoria{display:block;margin-top:20px;color:#888;font-size:12px;line-height:1.6}
-.rcp .save{background:#820ad1;color:#fff;border-radius:14px;padding:16px;font-weight:700;width:100%;font-size:15px;margin-top:32px;cursor:pointer;border:0}
 .toast{position:fixed;top:80px;left:50%;transform:translateX(-50%);background:#f5f1fa;color:#202027;padding:14px 20px;border-radius:14px;font-size:13.5px;font-weight:600;z-index:100;display:none;max-width:90%;box-shadow:0 12px 40px rgba(0,0,0,.5);text-align:center}
 .toast.on{display:block}
 .toast.err{background:#ffe3e5;color:#751a28}
-/* QR SCANNER */
-#qrModal{position:fixed;inset:0;background:#000;z-index:200;display:none;flex-direction:column}
-#qrModal.on{display:flex}
-#qrModal video{flex:1;object-fit:cover;width:100%}
-#qrModal .topbar{position:absolute;top:0;left:0;right:0;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(0,0,0,.8),transparent);z-index:2}
-#qrModal .topbar button{color:#fff;font-size:15px;font-weight:700;background:rgba(255,255,255,.15);border-radius:10px;padding:10px 16px;border:0;cursor:pointer}
-#qrModal .topbar span{color:#fff;font-size:16px;font-weight:700}
-#qrModal .frame{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:250px;height:250px;border:3px solid #fff;border-radius:20px;box-shadow:0 0 0 4000px rgba(0,0,0,.55);pointer-events:none;z-index:1}
-#qrModal .hint{position:absolute;bottom:50px;left:50%;transform:translateX(-50%);color:#fff;font-size:14px;font-weight:600;background:rgba(0,0,0,.7);padding:12px 20px;border-radius:20px;z-index:2;text-align:center;max-width:80%}
 </style>
-</head>
-<body>
+</head><body>
 
 <header>
   <div class="hr">
@@ -138,14 +100,13 @@ nav button.active::before{content:"";position:absolute;top:-4px;left:50%;transfo
     <div class="hi">
       <button onclick="tgSaldo()"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg></button>
       <button onclick="tst('Central de ajuda')"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3"></path></svg></button>
-      <button onclick="tst('Mensagens')"><svg viewBox="0 0 24 24"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"></path><path d="m9 12 2 2 4-4"></path></svg></button>
+      <button onclick="tst('Mensagens')"><svg viewBox="0 0 24 24"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"></path></svg></button>
     </div>
   </div>
   <div class="greet" id="greet">Olá, NUBANK</div>
 </header>
 
 <main>
-
   <section class="view active" id="v-home">
     <div class="sb">
       <div class="sbl">Saldo em conta <span>›</span></div>
@@ -154,7 +115,6 @@ nav button.active::before{content:"";position:absolute;top:-4px;left:50%;transfo
         <button class="vinc" onclick="tst('Em breve')"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>Vincular conta</button>
       </div>
     </div>
-
     <div class="qk">
       <button onclick="go('pix')"><span class="c"><svg viewBox="0 0 24 24"><path d="M7 3H4v3M4 3l6 6M17 21h3v-3m0 3-6-6M21 7V4h-3m3 0-6 6M3 17v3h3m-3 0 6-6"></path></svg></span><span>Área Pix e<br>Transferir</span></button>
       <button onclick="go('pagar')"><span class="c"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M3 10h18M6 14h4"></path></svg></span><span>Pagar</span></button>
@@ -162,14 +122,11 @@ nav button.active::before{content:"";position:absolute;top:-4px;left:50%;transfo
       <button onclick="go('dep')"><span class="c"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M11 18h2"></path></svg></span><span>Recarga de<br>celular</span></button>
       <button onclick="go('cartoes')"><span class="c"><svg viewBox="0 0 24 24"><path d="M3 7h18M5 7v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7"></path></svg></span><span>Caixinhas<br>e investimentos</span></button>
     </div>
-
     <div class="pl" onclick="go('cartoes')"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 10h18"></path></svg><span class="t">Meus cartões</span></div>
-
     <div class="bn" onclick="tst('Nubank Vida')">
       <div class="txt">Nubank Vida: seguro a partir de <b>R$4/mês</b>.</div>
       <svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
     </div>
-
     <div class="st">Cartão de crédito</div>
     <div class="ccsec">
       <div class="row">
@@ -177,7 +134,6 @@ nav button.active::before{content:"";position:absolute;top:-4px;left:50%;transfo
         <div style="text-align:right"><div class="lb">Limite disponível</div><div class="vl">R$ 5.000,00</div></div>
       </div>
     </div>
-
     <div class="st">Últimas movimentações</div>
     <div id="recent"></div>
   </section>
@@ -214,7 +170,7 @@ nav button.active::before{content:"";position:absolute;top:-4px;left:50%;transfo
     <h1>Antecipar FGTS</h1>
     <div class="form">
       <div class="pl" style="margin:0 0 16px 0"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span class="t">Saldo: <b id="fgtsS">R$ 3.480,00</b></span></div>
-      <div class="f"><label>Valor a antecipar (R$)</label><input id="fgV" type="number" step="0.01" placeholder="100,00" inputmode="decimal"></div>
+      <div class="f"><label>Valor (R$)</label><input id="fgV" type="number" step="0.01" placeholder="100,00" inputmode="decimal"></div>
       <div class="f"><label>Parcelas</label><select id="fgP"><option value="12">12x (1,29% a.m.)</option><option value="24">24x (1,39% a.m.)</option></select></div>
       <div class="f"><label>Nome completo</label><input id="fgN" placeholder="Seu nome"></div>
       <div class="f"><label>CPF</label><input id="fgC" placeholder="000.000.000-00" inputmode="numeric"></div>
@@ -272,71 +228,54 @@ nav button.active::before{content:"";position:absolute;top:-4px;left:50%;transfo
   <button data-n="perfil" onclick="go('perfil')"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.3 3.5-7 8-7s8 2.7 8 7"></path></svg>Perfil</button>
 </nav>
 
-<div class="toast" id="tst"></div>
-
-<!-- COMPROVANTE -->
-<div class="rcpt" id="rm">
-  <div class="rcp">
-    <button class="bk" onclick="fecharRcp()">← Voltar</button>
-    <div class="lg">nu</div>
-    <h2 id="rcpT">Comprovante de transferência</h2>
-    <div class="dt" id="rcpDt"></div>
-
-    <div class="row"><span class="l">Valor</span><span class="v" id="rcpValor"></span></div>
-    <div class="row"><span class="l">Tipo de transferência</span><span class="v" id="rcpTipo"></span></div>
-
-    <div class="sec-title">
-      <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"></path><path d="M9 12l2 2 4-4    </div>
-    <div class="row"><span class="l">Nome</span><span class="v" id="rcpDestName"></span></div>
-    <div class="row"><span class="l">CPF/CNPJ</span><span class="v" id="rcpDestDoc"></span></div>
-    <div class="row"><span class="l">Instituição</span><span class="v" id="rcpDestInst"></span></div>
-    <div class="row"><span class="l">Tipo de conta</span><span class="v">Conta de pagamentos</span></div>
-
-    <div class="sec-title">
-      <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"></path><path d="M12 9v6M9 12l3-3 3 3"></path></svg></div>
-      <span>Origem</span>
+<div class="toast" id="tst"></div><div class="rcpt" id="rm">
+  <div style="max-width:620px;margin:0 auto;padding:26px 24px 60px;font-family:-apple-system,Arial,sans-serif;background:#fff;color:#111">
+    <button onclick="fecharRcp()" style="background:#f0f0f2;border:0;border-radius:10px;padding:10px 16px;font-size:13px;font-weight:600;margin-bottom:28px;color:#333;cursor:pointer">← Voltar</button>
+    <div style="color:#820ad1;font-size:44px;font-weight:900;letter-spacing:-4px;margin-bottom:22px;line-height:1;font-family:Arial">nu</div>
+    <h2 id="rcpT" style="font-size:28px;font-weight:800;margin:0 0 8px;color:#111;letter-spacing:-.6px">Comprovante de transferência</h2>
+    <div id="rcpDt" style="font-size:15px;color:#a0a0a0;margin-bottom:36px;font-weight:500"></div>
+    <div style="display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:16px;border-bottom:1px solid #f0f0f2"><span style="color:#111;font-weight:600">Valor</span><span id="rcpValor" style="color:#7a7a7a;font-weight:500;text-align:right"></span></div>
+    <div style="display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:16px;border-bottom:1px solid #f0f0f2"><span style="color:#111;font-weight:600">Tipo de transferência</span><span id="rcpTipo" style="color:#7a7a7a;font-weight:500;text-align:right">Pix</span></div>
+    <div style="display:flex;align-items:center;gap:12px;font-size:16px;font-weight:700;color:#111;margin:32px 0 8px"><div style="width:38px;height:38px;border-radius:8px;border:1.5px solid #111;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" style="width:22px;height:22px;stroke:#111;fill:none;stroke-width:1.8"><path d="M4 5h16v14H4z"></path><path d="M9 12l2 2 4-4"></path></svg></div><span>Destino</span></div>
+    <div style="display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:16px;border-bottom:1px solid #f0f0f2"><span style="color:#111;font-weight:600;flex:0 0 42%">Nome</span><span id="rcpDestName" style="color:#7a7a7a;font-weight:500;text-align:right;flex:1;word-break:break-word"></span></div>
+    <div style="display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:16px;border-bottom:1px solid #f0f0f2"><span style="color:#111;font-weight:600;flex:0 0 42%">CPF/CNPJ</span><span id="rcpDestDoc" style="color:#7a7a7a;font-weight:500;text-align:right;flex:1;word-break:break-word"></span></div>
+    <div style="display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:16px;border-bottom:1px solid #f0f0f2"><span style="color:#111;font-weight:600;flex:0 0 42%">Instituição</span><span id="rcpDestInst" style="color:#7a7a7a;font-weight:500;text-align:right;flex:1;word-break:break-word"></span></div>
+    <div style="display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:16px;border-bottom:1px solid #f0f0f2"><span style="color:#111;font-weight:600;flex:0 0 42%">Tipo de conta</span><span style="color:#7a7a7a;font-weight:500;text-align:right;flex:1">Conta de pagamentos</span></div>
+    <div style="display:flex;align-items:center;gap:12px;font-size:16px;font-weight:700;color:#111;margin:32px 0 8px"><div style="width:38px;height:38px;border-radius:8px;border:1.5px solid #111;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" style="width:22px;height:22px;stroke:#111;fill:none;stroke-width:1.8"><path d="M4 5h16v14H4z"></path><path d="M12 9v6M9 12l3-3 3 3"></path></svg></div><span>Origem</span></div>
+    <div style="display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:16px;border-bottom:1px solid #f0f0f2"><span style="color:#111;font-weight:600;flex:0 0 42%">Nome</span><span id="rcpOrigName" style="color:#7a7a7a;font-weight:500;text-align:right;flex:1;word-break:break-word"></span></div>
+    <div style="display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:16px;border-bottom:1px solid #f0f0f2"><span style="color:#111;font-weight:600;flex:0 0 42%">Instituição</span><span style="color:#7a7a7a;font-weight:500;text-align:right;flex:1">NU PAGAMENTOS - IP</span></div>
+    <div style="display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:16px;border-bottom:1px solid #f0f0f2"><span style="color:#111;font-weight:600;flex:0 0 42%">Agência</span><span style="color:#7a7a7a;font-weight:500;text-align:right;flex:1">0001</span></div>
+    <div style="display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:16px;border-bottom:1px solid #f0f0f2"><span style="color:#111;font-weight:600;flex:0 0 42%">Conta</span><span style="color:#7a7a7a;font-weight:500;text-align:right;flex:1">64140458-8</span></div>
+    <div style="display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:16px;border-bottom:1px solid #f0f0f2"><span style="color:#111;font-weight:600;flex:0 0 42%">CPF</span><span id="rcpOrigCpf" style="color:#7a7a7a;font-weight:500;text-align:right;flex:1"></span></div>
+    <div style="background:#f5f5f7;border-radius:12px;padding:24px;margin-top:36px;font-size:13.5px;line-height:1.7;color:#555">
+      <b style="color:#111;display:block;font-weight:700;font-size:14px">Nu Pagamentos S.A. - Instituição de Pagamento</b>
+      <span style="display:block;color:#111;font-weight:700">CNPJ 18.236.120/0001-58</span>
+      <span style="display:block;margin-top:18px;color:#111;font-weight:700">ID da transação:</span>
+      <span id="rcpAt" style="display:block;color:#333;word-break:break-all;font-size:12.5px;margin-top:4px;font-family:monospace"></span>
+      <span style="display:block;margin-top:18px;color:#666">Estamos aqui para ajudar se você tiver alguma dúvida.</span>
+      <a href="#" onclick="return false" style="color:#820ad1;font-weight:700;text-decoration:none;display:inline-block;margin-top:10px;font-size:14px">Me ajuda →</a>
+      <span style="display:block;margin-top:20px;color:#888;font-size:12px">Ouvidoria: 0800 887 0463, dias úteis das 09h às 18h (SP).</span>
     </div>
-    <div class="row"><span class="l">Nome</span><span class="v" id="rcpOrigName"></span></div>
-    <div class="row"><span class="l">Instituição</span><span class="v">NU PAGAMENTOS - IP</span></div>
-    <div class="row"><span class="l">Agência</span><span class="v">0001</span></div>
-    <div class="row"><span class="l">Conta</span><span class="v">64140458-8</span></div>
-    <div class="row"><span class="l">CPF</span><span class="v" id="rcpOrigCpf"></span></div>
-
-    <div class="box">
-      <b>Nu Pagamentos S.A. - Instituição de Pagamento</b>
-      <span class="cj">CNPJ 18.236.120/0001-58</span>
-      <span class="idt">ID da transação:</span>
-      <span class="at" id="rcpAt"></span>
-      <span class="help">Estamos aqui para ajudar se você tiver alguma dúvida.</span>
-      <a class="lk" href="#" onclick="return false">Me ajuda →</a>
-      <span class="ouvidoria">Ouvidoria: 0800 887 0463, atendimento em dias úteis, das 09h às 18h (horário de São Paulo).</span>
-    </div>
-
-    <button class="save" onclick="window.print()">Salvar comprovante</button>
+    <button onclick="window.print()" style="background:#820ad1;color:#fff;border:0;border-radius:14px;padding:16px;font-weight:700;width:100%;font-size:15px;margin-top:32px;cursor:pointer">Salvar comprovante</button>
   </div>
 </div>
 
-<!-- QR MODAL -->
-<div id="qrModal">
-  <div class="topbar">
-    <button onclick="fecharQR()">✕ Fechar</button>
-    <span>Ler QR Code</span>
+<div id="qrModal" style="position:fixed;inset:0;background:#000;z-index:200;display:none;flex-direction:column">
+  <div style="position:absolute;top:0;left:0;right:0;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(0,0,0,.8),transparent);z-index:2">
+    <button onclick="fecharQR()" style="color:#fff;font-size:15px;font-weight:700;background:rgba(255,255,255,.15);border-radius:10px;padding:10px 16px;border:0;cursor:pointer">✕ Fechar</button>
+    <span style="color:#fff;font-size:16px;font-weight:700">Ler QR Code</span>
     <span style="width:80px"></span>
   </div>
-  <video id="qrVideo" playsinline autoplay muted></video>
-  <div class="frame"></div>
-  <div class="hint" id="qrHint">Aponte a câmera para o QR Code</div>
+  <video id="qrVideo" playsinline autoplay muted style="flex:1;object-fit:cover;width:100%"></video>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:250px;height:250px;border:3px solid #fff;border-radius:20px;box-shadow:0 0 0 4000px rgba(0,0,0,.55);pointer-events:none;z-index:1"></div>
+  <div id="qrHint" style="position:absolute;bottom:50px;left:50%;transform:translateX(-50%);color:#fff;font-size:14px;font-weight:600;background:rgba(0,0,0,.7);padding:12px 20px;border-radius:20px;z-index:2;text-align:center;max-width:80%">Aponte a câmera para o QR Code</div>
 </div>
 
 <script>
-var K='nbk_v19';
+var K='nbk_v21';
 var INIT={saldo:110000,txs:[],nome:'NUBANK',meuCpf:'',cardN:null,cardE:null,fgts:3480};
 var S=carregar();
-var vis=true;
-var tmr;
-var qrStream=null;
-var qrLoop=null;
-
+var vis=true,tmr,qrStream=null,qrLoop=null;
 function carregar(){try{var r=localStorage.getItem(K);if(r){var s=JSON.parse(r);if(s&&typeof s.saldo==='number'&&Array.isArray(s.txs)){for(var k in INIT){if(!(k in s))s[k]=INIT[k]}return s}}}catch(e){}var c={};for(var kk in INIT)c[kk]=INIT[kk];return c}
 function salvar(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
 function $id(i){return document.getElementById(i)}
@@ -348,47 +287,21 @@ var MS=['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ']
 function fdt(d){return String(d.getDate()).padStart(2,'0')+' '+MS[d.getMonth()]+' '+d.getFullYear()}
 function fdtHora(d){return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear()+' - '+new Intl.DateTimeFormat('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'}).format(d)}
 function fhr(d){return new Intl.DateTimeFormat('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'}).format(d)}
-function auth(){var h='0123456789abcdef',s='E',i;for(i=0;i<8;i++)s+=h[Math.floor(Math.random()*16)];for(i=0;i<12;i++)s+=h[Math.floor(Math.random()*16)];return s}
+function auth(){var h='0123456789abcdef',s='E',i;for(i=0;i<18;i++)s+=h[Math.floor(Math.random()*16)];return s}
 function fcpf(v){var n=String(v).replace(/\D/g,'').slice(0,14);if(n.length<=3)return n;if(n.length<=6)return n.replace(/(\d{3})(\d+)/,'$1.$2');if(n.length<=9)return n.replace(/(\d{3})(\d{3})(\d+)/,'$1.$2.$3');if(n.length<=11)return n.replace(/(\d{3})(\d{3})(\d{3})(\d+)/,'$1.$2.$3-$4');if(n.length<=12)return n.replace(/(\d{2})(\d{3})(\d{3})(\d{4})/,'$1.$2.$3/$4');return n.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d+)/,'$1.$2.$3/$4-$5')}
 function maskCpf(v){var n=String(v).replace(/\D/g,'');if(n.length!==11)return v;return '•••.'+n.slice(3,6)+'.'+n.slice(6,9)+'-••'}
 function rCardN(){var p=['5412','5275','4539','4916','5447','4024'];var pre=p[Math.floor(Math.random()*p.length)];var out=pre+' ';for(var i=0;i<3;i++){var blk='';for(var j=0;j<4;j++)blk+=Math.floor(Math.random()*10);out+=blk+(i<2?' ':'')}return out}
 function rCardE(){var m=String(Math.floor(Math.random()*12)+1).padStart(2,'0');var a=String(new Date().getFullYear()+Math.floor(Math.random()*4)+2).slice(-2);return m+'/'+a}
-
-function go(v){
-  var vs=document.querySelectorAll('.view');
-  for(var i=0;i<vs.length;i++)vs[i].className='view'+(vs[i].id==='v-'+v?' active':'');
-  var bs=document.querySelectorAll('nav button');
-  for(var j=0;j<bs.length;j++)bs[j].className=bs[j].getAttribute('data-n')===v?'active':'';
-  if(v==='home')rh();
-  if(v==='extrato')re();
-  if(v==='cartoes')rc();
-  window.scrollTo(0,0);
-}
+function go(v){var vs=document.querySelectorAll('.view');for(var i=0;i<vs.length;i++)vs[i].className='view'+(vs[i].id==='v-'+v?' active':'');var bs=document.querySelectorAll('nav button');for(var j=0;j<bs.length;j++)bs[j].className=bs[j].getAttribute('data-n')===v?'active':'';if(v==='home')rh();if(v==='extrato')re();if(v==='cartoes')rc();window.scrollTo(0,0)}
 function tgSaldo(){vis=!vis;rb()}
 function rb(){var t=vis?money(S.saldo):'••••••';var el=$id('saldo');if(el)el.textContent=t;var el2=$id('saldoEx');if(el2)el2.textContent=t}
-
-function txh(t){
-  var i=t.tipo==='c',sg=i?'+ ':'- ';
-  return '<div class="tx"><div class="i"><div class="t">'+esc(t.tit)+'</div><div class="s">'+esc(t.dt)+' · '+esc(t.sub||'')+'</div>'+(t.rcp?'<span class="vb" onclick="verRcp(\''+esc(t.id)+'\')">Ver comprovante ›</span>':'')+'</div><div class="v '+(i?'in':'out')+'">'+sg+money(t.vl)+'</div></div>';
-}
-function rh(){
-  var g=$id('greet');
-  if(g)g.textContent='Olá, '+(S.nome&&S.nome.trim()?S.nome:'NUBANK');
-  var pi=$id('profI');if(pi)pi.value=S.nome||'';
-  var pc=$id('profCpf');if(pc)pc.value=S.meuCpf||'';
-  var ch=$id('cardH');if(ch)ch.textContent=(S.nome||'USUÁRIO').toUpperCase();
-  rb();
-  var r=S.txs.slice(0,3);
-  var bx=$id('recent');
-  if(bx)bx.innerHTML=r.length?r.map(txh).join(''):'<div class="empty">Nenhuma movimentação ainda.</div>';
-}
+function txh(t){var i=t.tipo==='c',sg=i?'+ ':'- ';return '<div class="tx"><div class="i"><div class="t">'+esc(t.tit)+'</div><div class="s">'+esc(t.dt)+' · '+esc(t.sub||'')+'</div>'+(t.rcp?'<span class="vb" onclick="verRcp(\''+esc(t.id)+'\')">Ver comprovante ›</span>':'')+'</div><div class="v '+(i?'in':'out')+'">'+sg+money(t.vl)+'</div></div>'}
+function rh(){var g=$id('greet');if(g)g.textContent='Olá, '+(S.nome&&S.nome.trim()?S.nome:'NUBANK');var pi=$id('profI');if(pi)pi.value=S.nome||'';var pc=$id('profCpf');if(pc)pc.value=S.meuCpf||'';var ch=$id('cardH');if(ch)ch.textContent=(S.nome||'USUÁRIO').toUpperCase();rb();var r=S.txs.slice(0,3);var bx=$id('recent');if(bx)bx.innerHTML=r.length?r.map(txh).join(''):'<div class="empty">Nenhuma movimentação ainda.</div>'}
 function re(){var b=$id('allTx');if(b)b.innerHTML=S.txs.length?S.txs.map(txh).join(''):'<div class="empty">Sem movimentações.</div>'}
 function rc(){if(!S.cardN){S.cardN=rCardN();S.cardE=rCardE();salvar()}var n=$id('cardNum');if(n)n.textContent=S.cardN;var e=$id('cardE');if(e)e.textContent=S.cardE}
 function addTx(tx){S.txs.unshift(tx);salvar()}
 function verRcp(id){for(var i=0;i<S.txs.length;i++)if(S.txs[i].id===id){abrirRcp(S.txs[i]);return}}
-
-function abrirRcp(t){
-  if(!t){alert('Erro');return}
+function abrirRcp(t){if(!t){alert('Erro');return}
   $id('rcpT').textContent=t.tipo==='c'?'Comprovante de recebimento':'Comprovante de transferência';
   $id('rcpDt').textContent=t.dtHora||fdtHora(new Date());
   $id('rcpValor').textContent=money(t.vl||0);
@@ -400,202 +313,72 @@ function abrirRcp(t){
   $id('rcpOrigCpf').textContent=t.pagDoc?maskCpf(t.pagDoc):'—';
   $id('rcpAt').textContent=t.at||'—';
   $id('rm').className='rcpt on';
-  $id('rm').scrollTop=0;
-}
+  $id('rm').scrollTop=0;}
 function fecharRcp(){$id('rm').className='rcpt'}
-
-/* ============ QR CODE ============ */
-function abrirQR(){
-  if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){
-    tst('Câmera não disponível neste navegador',1);
-    return;
-  }
-  var modal=$id('qrModal');
-  modal.className='on';
-  $id('qrHint').textContent='Aponte a câmera para o QR Code';
+function abrirQR(){if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){var m=prompt('Câmera indisponível. Nome do destinatário:');if(m)processarQR(JSON.stringify({name:m,key:m.toLowerCase().replace(/\s+/g,'.')+'@email.com',cpf:'123.456.789-00',institution:'Nubank'}));return}
+  var modal=$id('qrModal');modal.style.display='flex';$id('qrHint').textContent='Aponte a câmera para o QR Code';
   navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}}).then(function(st){
-    qrStream=st;
-    var v=$id('qrVideo');
-    v.srcObject=st;
-    v.setAttribute('playsinline','');
-    v.setAttribute('muted','');
-    v.play().catch(function(){});
+    qrStream=st;var v=$id('qrVideo');v.srcObject=st;v.setAttribute('playsinline','');v.setAttribute('muted','');v.play().catch(function(){});
     var done=false;
-    if('BarcodeDetector' in window){
-      try{
-        var det=new window.BarcodeDetector({formats:['qr_code']});
-        var loop=function(){
-          if(done||!qrStream)return;
-          det.detect(v).then(function(codes){
-            if(codes&&codes.length&&!done){
-              done=true;
-              processarQR(codes[0].rawValue);
-              fecharQR();
-            } else {
-              qrLoop=setTimeout(loop,500);
-            }
-          }).catch(function(){qrLoop=setTimeout(loop,800)});
-        };
-        loop();
-      }catch(e){
-        $id('qrHint').textContent='Aponte para o QR Code (detecção em 3s)';
-        qrLoop=setTimeout(function(){
-          if(done)return;
-          done=true;
-          processarQR(JSON.stringify({name:'Maria Silva',key:'maria.silva@email.com',cpf:'123.456.789-00',institution:'Nubank'}));
-          fecharQR();
-        },3500);
-      }
-    } else {
-      $id('qrHint').textContent='Aponte para o QR Code (detecção em 3s)';
-      qrLoop=setTimeout(function(){
-        if(done)return;
-        done=true;
-        processarQR(JSON.stringify({name:'Maria Silva',key:'maria.silva@email.com',cpf:'123.456.789-00',institution:'Nubank'}));
-        fecharQR();
-      },3500);
-    }
-  }).catch(function(){
-    tst('Não foi possível acessar a câmera',1);
-    fecharQR();
-  });
-}
-function fecharQR(){
-  $id('qrModal').className='';
-  if(qrStream){qrStream.getTracks().forEach(function(t){t.stop()});qrStream=null}
-  if(qrLoop){clearTimeout(qrLoop);qrLoop=null}
-}
-function processarQR(raw){
-  var n='',k='',d='',inst='Nubank';
-  try{
-    var o=JSON.parse(raw);
-    n=o.name||o.nome||o.recebedor||'';
-    k=o.key||o.chave||o.pix||'';
-    d=o.cpf||o.cnpj||o.doc||'';
-    inst=o.institution||o.banco||'Nubank';
-  }catch(e){
-    n=String(raw).slice(0,60);
-    k=String(raw).slice(0,100);
-  }
-  if(!n&&!k){tst('QR Code não reconhecido',1);return}
-  go('pix');
-  $id('pName').value=n;
-  $id('pKey').value=k;
-  if(d)$id('pDoc').value=fcpf(d);
-  $id('pInst').value=inst;
-  tst('QR Code lido! Preencha o valor');
-  setTimeout(function(){$id('pVal').focus()},300);
-}
-
-/* ============ AÇÕES ============ */
-function fazerPix(){
-  var n=$id('pName').value.trim();
-  var d=$id('pDoc').value.trim();
-  var k=$id('pKey').value.trim();
-  var inst=$id('pInst').value.trim();
-  var v=Math.round(Number($id('pVal').value)*100)/100;
-  var ds=$id('pDesc').value.trim()||'Pix enviado';
-  if(!n||!d||!k||!inst){tst('Preencha todos os campos',1);return}
+    if('BarcodeDetector' in window){try{
+      var det=new window.BarcodeDetector({formats:['qr_code']});
+      var loop=function(){if(done||!qrStream)return;det.detect(v).then(function(c){if(c&&c.length&&!done){done=true;processarQR(c[0].rawValue);fecharQR()}else qrLoop=setTimeout(loop,500)}).catch(function(){qrLoop=setTimeout(loop,800)})};
+      loop();
+      qrLoop=setTimeout(function(){if(done)return;done=true;$id('qrHint').textContent='Preenchendo exemplo...';processarQR(JSON.stringify({name:'Maria Silva',key:'maria.silva@email.com',cpf:'123.456.789-00',institution:'Nubank'}));fecharQR()},8000);
+    }catch(e){qrLoop=setTimeout(function(){if(done)return;done=true;processarQR(JSON.stringify({name:'Maria Silva',key:'maria.silva@email.com',cpf:'123.456.789-00',institution:'Nubank'}));fecharQR()},3000)}}
+    else{qrLoop=setTimeout(function(){if(done)return;done=true;processarQR(JSON.stringify({name:'Maria Silva',key:'maria.silva@email.com',cpf:'123.456.789-00',institution:'Nubank'}));fecharQR()},3000)}
+  }).catch(function(){var m=prompt('Sem acesso à câmera.\nNome do destinatário:');if(m)processarQR(JSON.stringify({name:m,key:m.toLowerCase().replace(/\s+/g,'.')+'@email.com',cpf:'123.456.789-00',institution:'Nubank'}));fecharQR()})}
+function fecharQR(){$id('qrModal').style.display='none';if(qrStream){qrStream.getTracks().forEach(function(t){t.stop()});qrStream=null}if(qrLoop){clearTimeout(qrLoop);qrLoop=null}}
+function processarQR(raw){var n='',k='',d='',inst='Nubank';
+  try{var o=JSON.parse(raw);n=o.name||o.nome||o.recebedor||'';k=o.key||o.chave||o.pix||'';d=o.cpf||o.cnpj||o.doc||'';inst=o.institution||o.banco||'Nubank'}
+  catch(e){n=String(raw).slice(0,60);k=String(raw).slice(0,100)}
+  if(!n&&!k){tst('QR não reconhecido',1);return}
+  go('pix');$id('pName').value=n;$id('pKey').value=k;if(d)$id('pDoc').value=fcpf(d);$id('pInst').value=inst;
+  tst('QR Code lido! Preencha o valor');setTimeout(function(){$id('pVal').focus()},300)}
+function fazerPix(){var n=$id('pName').value.trim(),d=$id('pDoc').value.trim(),k=$id('pKey').value.trim(),inst=$id('pInst').value.trim();
+  var v=Math.round(Number($id('pVal').value)*100)/100,ds=$id('pDesc').value.trim()||'Pix enviado';
+  if(!n||!d||!k||!inst){tst('Preencha tudo',1);return}
   if(!isFinite(v)||v<=0){tst('Valor inválido',1);return}
   if(v>S.saldo){tst('Saldo insuficiente',1);return}
-  var now=new Date();
-  var pagNome=S.nome&&S.nome.trim()?S.nome:'Você';
-  var pagDoc=S.meuCpf&&S.meuCpf.trim()?S.meuCpf:'';
+  var now=new Date();var pagNome=S.nome&&S.nome.trim()?S.nome:'Você';var pagDoc=S.meuCpf&&S.meuCpf.trim()?S.meuCpf:'';
   var tx={id:nid(),tipo:'d',tit:'Pix enviado',sub:n,vl:v,desc:ds,dt:fdt(now),dtHora:fdtHora(now),hr:fhr(now),nome:n,doc:d,chave:k,inst:inst,pagNome:pagNome,pagDoc:pagDoc,at:auth(),rcp:1,tipoPay:'Pix'};
-  S.saldo=Math.round((S.saldo-v)*100)/100;
-  addTx(tx);
+  S.saldo=Math.round((S.saldo-v)*100)/100;addTx(tx);
   $id('pName').value='';$id('pDoc').value='';$id('pKey').value='';$id('pInst').value='';$id('pVal').value='';$id('pDesc').value='';
-  rh();
-  abrirRcp(tx);
-  tst('Pix enviado!');
-}
-function pagar(){
-  var t=$id('pgT').value;
-  var c=$id('pgC').value.trim();
-  var b=$id('pgB').value.trim();
-  var v=Math.round(Number($id('pgV').value)*100)/100;
-  if(!c||!b){tst('Preencha tudo',1);return}
-  if(!isFinite(v)||v<=0){tst('Valor inválido',1);return}
-  if(v>S.saldo){tst('Saldo insuficiente',1);return}
-  var now=new Date();
-  var pagNome=S.nome&&S.nome.trim()?S.nome:'Você';
-  var pagDoc=S.meuCpf&&S.meuCpf.trim()?S.meuCpf:'';
+  rh();abrirRcp(tx);tst('Pix enviado!')}
+function pagar(){var t=$id('pgT').value,c=$id('pgC').value.trim(),b=$id('pgB').value.trim(),v=Math.round(Number($id('pgV').value)*100)/100;
+  if(!c||!b){tst('Preencha tudo',1);return}if(!isFinite(v)||v<=0){tst('Valor inválido',1);return}if(v>S.saldo){tst('Saldo insuficiente',1);return}
+  var now=new Date();var pagNome=S.nome&&S.nome.trim()?S.nome:'Você';var pagDoc=S.meuCpf&&S.meuCpf.trim()?S.meuCpf:'';
   var tx={id:nid(),tipo:'d',tit:'Pagamento',sub:b,vl:v,desc:t+' · '+b,dt:fdt(now),dtHora:fdtHora(now),hr:fhr(now),nome:b,doc:'',chave:c,inst:t,pagNome:pagNome,pagDoc:pagDoc,at:auth(),rcp:1,tipoPay:'Boleto'};
-  S.saldo=Math.round((S.saldo-v)*100)/100;
-  addTx(tx);
+  S.saldo=Math.round((S.saldo-v)*100)/100;addTx(tx);
   $id('pgC').value='';$id('pgB').value='';$id('pgV').value='';
-  rh();abrirRcp(tx);tst('Pagamento realizado!');
-}
-function fgtsAntecipar(){
-  var v=Math.round(Number($id('fgV').value)*100)/100;
-  var p=$id('fgP').value;
-  var n=$id('fgN').value.trim();
-  var c=$id('fgC').value.trim();
-  if(!n||!c){tst('Preencha nome e CPF',1);return}
-  if(!isFinite(v)||v<100){tst('Mínimo R$ 100',1);return}
-  if(v>S.fgts){tst('Maior que o saldo',1);return}
-  var now=new Date();
-  S.saldo=Math.round((S.saldo+v)*100)/100;
-  S.fgts=Math.round((S.fgts-v)*100)/100;
+  rh();abrirRcp(tx);tst('Pago!')}
+function fgtsAntecipar(){var v=Math.round(Number($id('fgV').value)*100)/100,p=$id('fgP').value,n=$id('fgN').value.trim(),c=$id('fgC').value.trim();
+  if(!n||!c){tst('Preencha nome e CPF',1);return}if(!isFinite(v)||v<100){tst('Mínimo R$ 100',1);return}if(v>S.fgts){tst('Maior que saldo',1);return}
+  var now=new Date();S.saldo=Math.round((S.saldo+v)*100)/100;S.fgts=Math.round((S.fgts-v)*100)/100;
   var tx={id:nid(),tipo:'c',tit:'Antecipação FGTS',sub:n+' · '+p+'x',vl:v,desc:'Antecipação FGTS em '+p+'x',dt:fdt(now),dtHora:fdtHora(now),hr:fhr(now),nome:n,doc:c,pagNome:'Caixa Econômica Federal',pagDoc:'00.360.305/0001-04',at:auth(),rcp:1,tipoPay:'Crédito'};
-  addTx(tx);
-  $id('fgtsS').textContent=money(S.fgts);
-  $id('fgV').value='';$id('fgN').value='';$id('fgC').value='';
-  rh();abrirRcp(tx);tst('Aprovado!');
-}
-function depositar(){
-  var v=Math.round(Number($id('dV').value)*100)/100;
-  var ds=$id('dD').value.trim()||'Depósito';
+  addTx(tx);$id('fgtsS').textContent=money(S.fgts);$id('fgV').value='';$id('fgN').value='';$id('fgC').value='';
+  rh();abrirRcp(tx);tst('Aprovado!')}
+function depositar(){var v=Math.round(Number($id('dV').value)*100)/100,ds=$id('dD').value.trim()||'Depósito';
   if(!isFinite(v)||v<=0){tst('Valor inválido',1);return}
-  var now=new Date();
-  S.saldo=Math.round((S.saldo+v)*100)/100;
-  var pagNome=S.nome&&S.nome.trim()?S.nome:'Você';
-  var pagDoc=S.meuCpf&&S.meuCpf.trim()?S.meuCpf:'';
+  var now=new Date();S.saldo=Math.round((S.saldo+v)*100)/100;
+  var pagNome=S.nome&&S.nome.trim()?S.nome:'Você';var pagDoc=S.meuCpf&&S.meuCpf.trim()?S.meuCpf:'';
   addTx({id:nid(),tipo:'c',tit:ds,sub:'Crédito em conta',vl:v,desc:ds,dt:fdt(now),dtHora:fdtHora(now),hr:fhr(now),nome:'Você',doc:pagDoc,pagNome:pagNome,pagDoc:pagDoc,at:auth(),rcp:1,tipoPay:'Depósito'});
-  $id('dV').value='';$id('dD').value='Depósito';
-  rh();tst('Depósito realizado!');
-}
-function gerarCartao(){
-  if(!confirm('Gerar novo cartão virtual?'))return;
-  S.cardN=rCardN();S.cardE=rCardE();salvar();rc();tst('Novo cartão gerado!');
-}
-function salvarNome(){
-  var n=$id('profI').value.trim();
-  var c=$id('profCpf').value.trim();
-  if(!n){tst('Digite um nome',1);return}
-  S.nome=n;S.meuCpf=c;salvar();rh();tst('Perfil salvo');
-}
-function limpar(){
-  if(!confirm('Apagar todo o histórico?'))return;
-  S.txs=[];salvar();rh();re();tst('Histórico apagado');
-}
-function resetar(){
-  if(!confirm('Restaurar demonstração?'))return;
-  var c={};for(var k in INIT)c[k]=INIT[k];
-  S=c;salvar();rh();re();rc();
-  var f=$id('fgtsS');if(f)f.textContent=money(S.fgts);
-  tst('Demonstração restaurada');
-}
-function exportarCSV(){
-  if(!S.txs.length){tst('Nada para exportar',1);return}
+  $id('dV').value='';$id('dD').value='Depósito';rh();tst('Depósito feito!')}
+function gerarCartao(){if(!confirm('Gerar novo cartão?'))return;S.cardN=rCardN();S.cardE=rCardE();salvar();rc();tst('Novo cartão!')}
+function salvarNome(){var n=$id('profI').value.trim(),c=$id('profCpf').value.trim();if(!n){tst('Digite um nome',1);return}S.nome=n;S.meuCpf=c;salvar();rh();tst('Perfil salvo')}
+function limpar(){if(!confirm('Apagar histórico?'))return;S.txs=[];salvar();rh();re();tst('Apagado')}
+function resetar(){if(!confirm('Restaurar?'))return;var c={};for(var k in INIT)c[k]=INIT[k];S=c;salvar();rh();re();rc();var f=$id('fgtsS');if(f)f.textContent=money(S.fgts);tst('Restaurado')}
+function exportarCSV(){if(!S.txs.length){tst('Nada',1);return}
   var L=['Data;Hora;Tipo;Titulo;Descricao;Valor'];
-  for(var i=0;i<S.txs.length;i++){
-    var t=S.txs[i];
-    L.push([t.dt,t.hr,t.tipo,t.tit,t.desc||'',String(t.vl).replace('.',',')].join(';'));
-  }
-  var b=new Blob(['\uFEFF'+L.join('\n')],{type:'text/csv;charset=utf-8'});
-  var u=URL.createObjectURL(b);
-  var a=document.createElement('a');a.href=u;a.download='extrato-nubank.csv';
-  document.body.appendChild(a);a.click();document.body.removeChild(a);
-  setTimeout(function(){URL.revokeObjectURL(u)},1500);
-}
-
+  for(var i=0;i<S.txs.length;i++){var t=S.txs[i];L.push([t.dt,t.hr,t.tipo,t.tit,t.desc||'',String(t.vl).replace('.',',')].join(';'))}
+  var b=new Blob(['\uFEFF'+L.join('\n')],{type:'text/csv;charset=utf-8'});var u=URL.createObjectURL(b);
+  var a=document.createElement('a');a.href=u;a.download='extrato-nubank.csv';document.body.appendChild(a);a.click();document.body.removeChild(a);
+  setTimeout(function(){URL.revokeObjectURL(u)},1500)}
 var pDocEl=$id('pDoc');if(pDocEl)pDocEl.addEventListener('input',function(e){e.target.value=fcpf(e.target.value)});
 var fgCEl=$id('fgC');if(fgCEl)fgCEl.addEventListener('input',function(e){e.target.value=fcpf(e.target.value)});
 var pCpfEl=$id('profCpf');if(pCpfEl)pCpfEl.addEventListener('input',function(e){e.target.value=fcpf(e.target.value)});
-
 var fgInit=$id('fgtsS');if(fgInit)fgInit.textContent=money(S.fgts);
 rh();re();rc();
 </script>
 </body>
-    </html>
+                                                                                                                                                                                                                                                                                                                                                                                           </html>
